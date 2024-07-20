@@ -39,7 +39,7 @@ def stable_stock_matching(buyers_preferences, stocks_preferences):
         }
         # print(b_s_dict)
         min_item = min(b_s_dict, key=b_s_dict.get)
-        matching[min_item[0]] = min_item[1]
+        matching[min_item[1]] = min_item[0]
         del_list += [
             key
             for key in buyer_stock_matrix
