@@ -50,30 +50,30 @@ def stable_stock_matching(buyers_preferences, stocks_preferences):
     return matching
 
 
-# def main():
-#     """
-#     This function tests the stable_stock_matching function.
-#     """
-    # buyers_preferences = {
-    #     "Buyer1": ["StockC", "StockB", "StockA"],
-    #     "Buyer2": ["StockB", "StockA", "StockC"],
-    #     "Buyer3": ["StockA", "StockB", "StockC"],
-    # }
-    # stocks_preferences = {
-    #     "StockA": ["Buyer1", "Buyer2", "Buyer3"],
-    #     "StockB": ["Buyer2", "Buyer1", "Buyer3"],
-    #     "StockC": ["Buyer1", "Buyer2", "Buyer3"],
-    # }
-#     buyers_preferences = {
-#         "Buyer1": ["StockA"]
-#     }
-#
-#     stocks_preferences = {
-#         "StockA": ["Buyer1"]
-#     }
-#     matching = stable_stock_matching(buyers_preferences, stocks_preferences)
-#     print(matching)
-#
-#
-# if __name__ == "__main__":
-#     main()
+def main():
+    """
+    This function tests the stable_stock_matching function.
+    """
+    buyers_preferences = {
+        "Buyer1": ["StockC", "StockB", "StockA"],
+        "Buyer2": ["StockB", "StockA", "StockC"],
+        "Buyer3": ["StockA", "StockB", "StockC"],
+    }
+    stocks_preferences = {
+        "StockA": ["Buyer1", "Buyer2", "Buyer3"],
+        "StockB": ["Buyer2", "Buyer1", "Buyer3"],
+        "StockC": ["Buyer1", "Buyer2", "Buyer3"],
+    }
+    buyers_preferences = {
+        "Buyer1": ["StockA"]
+    }
+
+    stocks_preferences = {
+        "StockA": ["Buyer1"]
+    }
+    matching = stable_stock_matching(buyers_preferences, stocks_preferences)
+    print(matching)
+
+
+if __name__ == "__main__":
+    main()
