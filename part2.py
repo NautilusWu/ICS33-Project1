@@ -11,8 +11,8 @@ def question1(n: dict) -> dict:
     :param n: dict where the values are unique
     :return: dict where the key and values are exchanged
     """
-    result = {v: k for k, v in n.items()}
-    return result
+    return {v: k for k, v in n.items()}
+
 
 def question2(n: dict) -> dict:
     """
@@ -22,8 +22,9 @@ def question2(n: dict) -> dict:
     :param n: dict original dictionary
     :return: dict new dictionary with list of keys
     """
-    result = {v: [key for key, val in n.items() if val == v] for v in n.values()}
-    return result
+    return {v: [key for key, val in n.items() if val == v] for v in n.values()}
+
+
 def question3(m: dict, n: dict) -> dict:
     """
     Given two dictionaries m and n, merge them into a new dictionary. Where
@@ -33,8 +34,7 @@ def question3(m: dict, n: dict) -> dict:
     :param n: dict second dictionary
     :return: dict new dictionary with merged values
     """
-    result = {k: m.get(k, 0) + n.get(k, 0) for k in m.keys() | n.keys()}
-    return result
+    return {k: m.get(k, 0) + n.get(k, 0) for k in m.keys() | n.keys()}
 
 
 def question4(n: list) -> list:
@@ -44,12 +44,11 @@ def question4(n: list) -> list:
     :param n: nested list structure
     :return: list of integers that appear more than once
     """
-    result = [
+    return [
         x
         for x in {item for sublist in n for item in sublist}
         if [item for sublist in n for item in sublist].count(x) > 1
     ]
-    return result
 
 
 def main() -> None:
